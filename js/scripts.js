@@ -34,4 +34,19 @@ var pushedScore = 0;
     $("#outputscore").text(currentScore = 0);
     $("#outputtotal").text(pushedScore);
   });
+  //Player2
+  $("form#player2Form").submit(function(event) {
+    event.preventDefault();
+    var diceRoll = Math.floor(Math.random() * 6) + 1
+    score = new PigDice(diceRoll,currentScore);
+    currentScore = score.diceToCurrent()
+    // alert(currentScore)
+    $("#outputrole2").text(diceRoll);
+    $("#outputscore2").text(currentScore);
+   });
+    $("#hold2").click(function() {
+    pushedScore = currentScore + pushedScore;
+    $("#outputscore2").text(currentScore = 0);
+    $("#outputtotal2").text(pushedScore);
+  });
 });
