@@ -74,12 +74,18 @@ var pushedScore2 = 0;
     hide2(diceRoll);
     $("#outputscore2").text(currentScore2);
    });
-    $("#hold2").click(function() {
+  $("#hold2").click(function() {
     pushedScore2 = currentScore2 + pushedScore2;
     $("#outputscore2").text(currentScore2 = 0);
     $("#outputtotal2").text(pushedScore2);
     $("form#player2Form").hide();
     $("form#player1Form").show();
     winner(pushedScore2);
+  });
+  //AI CODE
+  $("#ai").click(function() {
+    $( "#aisubmit" ).click();
+    $( "#aisubmit" ).click();
+    $( "#hold2" ).click();
   });
 });
