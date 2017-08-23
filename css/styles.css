@@ -9,3 +9,6 @@ text-align: center;
   margin: auto;
   color: red;
 }
+#aihold {
+  display: none;
+}

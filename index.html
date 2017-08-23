@@ -22,11 +22,17 @@
             <h3>Your current Role: <span id="outputrole"></span></h3>
             <h3>Your current Score: <span id="outputscore"></span></h3>
             <button id="hold" type="button">Hold</button>
+            <button id="aihold" type="button">Hold</button>
             <h3>Your Score: <span id="outputtotal"></span></h3>
         </div>
 <!-- Player 2 Form -->
         <div class="col-md-6">
-            <h3>Player 2</h3>
+            <h3>Select a player or Computer:</h3>
+            <select class="form-control" id="selectplayers">
+              <option value="0"></option>
+              <option value="1">Play The Computer(Easy)</option>
+              <option value="2">Play A Friend</option>
+            </select>
             <form id="player2Form">
               <button id="aisubmit" type="submit">Roll</button>
             </form>
@@ -35,7 +41,7 @@
             <button id="hold2" type="button">Hold</button>
             <h3>Your Score: <span id="outputtotal2"></span></h3>
         </div>
-        <button id="ai" type="button">Play the AI</button>
+        <!-- <button id="ai" type="button">Play the AI</button> -->
       </div>
     </div>
   </body>

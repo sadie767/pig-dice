@@ -35,6 +35,21 @@ function winner(pushedScore1,pushedScore2) {
     location.reload();
   }
 }
+function computer(player) {
+  if (player === "1") {
+    alert("selected computer")
+    $( "#aisubmit" ).hide();
+    $( "#hold2" ).hide();
+    $( "#aisubmit" ).click();
+    $( "#hold2" ).click();
+    $( "#aihold" ).show();
+    $( "#hold" ).hide();
+  } else if (player === "2") {
+    alert("Selected Friend!")
+    $( "#aisubmit" ).show();
+    $( "#hold2" ).show();
+  }
+}
 //Front End
 $(document).ready(function() {
 //Input Form 1
@@ -83,9 +98,21 @@ var pushedScore2 = 0;
     winner(pushedScore2);
   });
   //AI CODE
-  $("#ai").click(function() {
+    $("#selectplayers").change(function(){
+    var player = $("#selectplayers").val();
+    // alert(player)
+    computer(player);
+  });
+  $("#aihold").click(function(){
+    $( "#hold" ).click();
     $( "#aisubmit" ).click();
     $( "#aisubmit" ).click();
     $( "#hold2" ).click();
-  });
+});
+  // $("#ai").click(function() {
+  //   $( "#aisubmit" ).click();
+  //   $( "#aisubmit" ).click();
+  //   $( "#hold2" ).click();
+  // });
+
 });
