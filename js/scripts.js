@@ -6,7 +6,12 @@ function PigDice(diceRoll,currentScore) {
 };
 //
 PigDice.prototype.diceToCurrent = function() {
-  return this.currentScore += this.diceRoll;
+  if(this.diceRoll === 1) {
+    alert("You rolled a 1. Next players turn!")
+    return this.currentScore = 0;
+  } else {
+    return this.currentScore += this.diceRoll;
+  }
 };
 
 //Front End
@@ -23,20 +28,10 @@ var pushedScore = 0;
     // alert(currentScore)
     $("#outputrole").text(diceRoll);
     $("#outputscore").text(currentScore);
-  });
-  $("form#player1Hold").submit(function(event) {
-    event.preventDefault();
+   });
+    $("#hold").click(function() {
     pushedScore = currentScore + pushedScore;
+    $("#outputscore").text(currentScore = 0);
     $("#outputtotal").text(pushedScore);
   });
-//Input Form 2
-  // $("form#deposit-form").submit(function(event) {
-  //   event.preventDefault();
-  //
-  //   deposit = parseInt($("#deposit").val());
-  //   withdrawl = parseInt($("#withdrawl").val());
-  //   newAccount.withDep(deposit,withdrawl);
-  //   $("#output").text("$" + newAccount.viewBal());
-  //   $("#nameout").text(name + " your balance is: ");
-  // });
 });
