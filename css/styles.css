@@ -7,8 +7,10 @@ text-align: center;
 #ai {
   padding: 30px;
   margin: auto;
-  color: red;
 }
 #aihold {
+  display: none;
+}
+#aiholdhard {
   display: none;
 }
