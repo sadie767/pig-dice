@@ -35,17 +35,6 @@ function winner(pushedScore1,pushedScore2) {
     location.reload();
   }
 }
-function aiEasy() {
-  $( "#hold" ).click();
-  $( "#aisubmit" ).click();
-  if (currentScore2 === 1) {
-    $( "#hold2" ).click();
-  } else {
-    $( "#aisubmit" ).click();
-  }
-  $( "#hold2" ).click();
-}
-
 function computer(player) {
   if (player === "1") {
     alert("selected computer")
@@ -59,14 +48,6 @@ function computer(player) {
     alert("Selected Friend!")
     $( "#aisubmit" ).show();
     $( "#hold2" ).show();
-  } else if (player === "3") {
-    alert("INSANE MOOOODEEEE!")
-    $( "#hold" ).hide();
-    $( "#aisubmit" ).hide();
-    $( "#hold2" ).hide();
-    $( "#aiholdhard" ).show();
-    $( "#aisubmit" ).click();
-    $( "#hold2" ).click();
   }
 }
 //Front End
@@ -125,26 +106,13 @@ var pushedScore2 = 0;
   $("#aihold").click(function(){
     $( "#hold" ).click();
     $( "#aisubmit" ).click();
-    if (currentScore2 === 1) {
-      $( "#hold2" ).click();
-    } else {
-      $( "#aisubmit" ).click();
-    }
+    $( "#aisubmit" ).click();
     $( "#hold2" ).click();
-  });
-  $("#aiholdhard").click(function(){
-    $( "#hold" ).click();
-    if (currentScore2 > currentScore1) {
-      $( "#hold2" ).click();
-      $( "#aisubmit" ).click();
-    } else {
-      if (currentScore2 === 1) {
-        $( "#hold2" ).click();
-      } else {
-        $( "#aisubmit" ).click();
-      }
-      $( "#aisubmit" ).click();
-    }
-    $( "#hold2" ).click();
-  });
+});
+  // $("#ai").click(function() {
+  //   $( "#aisubmit" ).click();
+  //   $( "#aisubmit" ).click();
+  //   $( "#hold2" ).click();
+  // });
+
 });
